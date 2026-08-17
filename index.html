@@ -41,20 +41,33 @@
     --stamp:#a02e24; --muted:#6f6a58; --line:#c9bd9d; --paper:#f6f1e2;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--kraft);color:var(--ink);font-family:"Courier New",Courier,monospace;line-height:1.6}
+  body{color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;padding:34px 10px 60px;
+    background:#57503f radial-gradient(90% 60% at 50% 0%, rgba(255,244,214,.08), transparent 70%)}
+  .typed{font-family:"Courier New",Courier,monospace}
+  .folder{max-width:940px;margin:0 auto;background:var(--kraft);position:relative;
+    border:1px solid #b3a578;box-shadow:0 18px 50px rgba(0,0,0,.4), 0 2px 0 #cdbf98 inset}
+  .folder:before{content:"CASE NO. 1752-09";position:absolute;top:-31px;left:26px;
+    background:var(--kraft);border:1px solid #b3a578;border-bottom:none;
+    font-family:"Courier New",Courier,monospace;font-size:12px;letter-spacing:.18em;
+    padding:6px 22px 4px;color:var(--muted)}
+  .folder:after{content:"";position:absolute;top:-31px;left:210px;right:0;height:31px;
+    border-bottom:1px solid transparent}
   .wrap{max-width:860px;margin:0 auto;padding:0 22px}
   .serif{font-family:Georgia,"Times New Roman",serif}
+  header .unit,.caseline,.stamp,.kicker,footer .doc,.checker label,.finding b,
+  .exhibit .lbl,.exhibit .cap,.related .no,.poster .miss,.poster .mon,.poster .seen,
+  input[type=date],button{font-family:"Courier New",Courier,monospace}
   a{color:var(--red)}
   button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
 
-  header{border-bottom:3px double var(--ink);padding:38px 0 30px;background:var(--kraft-dark)}
+  header{border-bottom:3px double var(--ink);padding:44px 0 34px;background:var(--kraft-dark)}
   header .unit{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-  header h1{font-family:Georgia,serif;font-size:clamp(24px,5vw,38px);margin-top:8px}
+  header h1{font-family:Georgia,serif;font-size:clamp(28px,5.6vw,46px);margin-top:8px}
   header .caseline{margin-top:10px;font-size:13px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .stamp{display:inline-block;border:3px solid var(--stamp);color:var(--stamp);font-weight:700;letter-spacing:.18em;padding:3px 12px;transform:rotate(-4deg);text-transform:uppercase;font-size:13px;background:rgba(255,255,255,.25)}
+  .stamp{display:inline-block;border:3px solid var(--stamp);color:var(--stamp);font-weight:700;letter-spacing:.18em;padding:4px 14px;transform:rotate(-4deg);text-transform:uppercase;font-size:14px;background:rgba(255,255,255,.25);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 
   .lead{padding:42px 0;border-bottom:1px solid var(--line)}
-  .lead p{max-width:640px;font-size:15.5px}
+  .lead p{max-width:640px;font-size:17px}
   .lead p + p{margin-top:12px;color:var(--muted)}
 
   section{padding:44px 0;border-bottom:1px solid var(--line)}
@@ -69,7 +82,10 @@
   .evidence-note{margin-top:14px;font-size:13px;color:var(--muted);max-width:600px}
 
   .posters{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:24px}
-  .poster{background:var(--paper);border:1px solid var(--line);padding:14px 12px;text-align:center;box-shadow:1px 2px 4px rgba(0,0,0,.12);transform:rotate(var(--r,0deg))}
+  .poster{background:var(--paper);border:1px solid var(--line);padding:18px 12px 14px;text-align:center;position:relative;
+    box-shadow:2px 5px 10px rgba(0,0,0,.22);transform:rotate(calc(var(--r,0deg)*2.4))}
+  .poster:before{content:"";position:absolute;top:6px;left:50%;margin-left:-5px;width:10px;height:10px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #d96a5c, var(--stamp) 60%, #6d1f18);box-shadow:0 2px 3px rgba(0,0,0,.35)}
   .poster .miss{font-size:10px;letter-spacing:.22em;color:var(--red);font-weight:700}
   .poster .day{font-family:Georgia,serif;font-size:30px;margin:6px 0 2px}
   .poster .mon{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
@@ -97,6 +113,8 @@
 </style>
 </head>
 <body>
+
+<div class="folder">
 
 <header>
   <div class="wrap">
@@ -185,6 +203,8 @@ Su Mo Tu We Th Fr Sa
     <p>© 1752 (OLD STYLE) THE MISSING DAYS COMMISSION · TIME PASSES. SOMETIMES IT SKIPS.</p>
   </div>
 </footer>
+
+</div>
 
 <script>
 (function(){
