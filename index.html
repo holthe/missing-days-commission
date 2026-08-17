@@ -74,9 +74,10 @@
   .lead .wrap{background:var(--paper);color:var(--ink);max-width:640px;padding:26px 30px;
     transform:rotate(.5deg);box-shadow:0 10px 28px rgba(0,0,0,.45);position:relative;
     font-family:"Courier New",Courier,monospace}
-  .lead .wrap:before{content:"";position:absolute;top:-12px;left:50%;margin-left:-46px;width:92px;height:24px;
-    background:rgba(255,255,255,.28);border-left:1px solid rgba(0,0,0,.08);border-right:1px solid rgba(0,0,0,.08);
-    transform:rotate(-2deg)}
+  .lead .wrap:before{content:"";position:absolute;top:-12px;left:50%;margin-left:-46px;width:92px;height:26px;
+    background:linear-gradient(180deg,rgba(233,216,160,.72),rgba(222,203,142,.6));
+    border-left:1px solid rgba(120,100,50,.25);border-right:1px solid rgba(120,100,50,.25);
+    box-shadow:0 2px 4px rgba(0,0,0,.25);transform:rotate(-2deg)}
   .lead p{max-width:640px;font-size:14px}
   .lead p + p{margin-top:12px;color:#6f6a58}
 
@@ -88,8 +89,10 @@
   /* exhibit: a printout taped to the wall */
   .exhibit{margin-top:22px;background:#101210;color:#c9d1c9;padding:22px;border:8px solid var(--card);
     box-shadow:0 12px 30px rgba(0,0,0,.55);max-width:460px;transform:rotate(-1deg);position:relative}
-  .exhibit:before{content:"";position:absolute;top:-22px;left:50%;margin-left:-46px;width:92px;height:24px;
-    background:rgba(255,255,255,.22);transform:rotate(2deg)}
+  .exhibit:before{content:"";position:absolute;top:-14px;left:50%;margin-left:-46px;width:92px;height:26px;
+    background:linear-gradient(180deg,rgba(233,216,160,.72),rgba(222,203,142,.6));
+    border-left:1px solid rgba(120,100,50,.25);border-right:1px solid rgba(120,100,50,.25);
+    box-shadow:0 2px 4px rgba(0,0,0,.25);transform:rotate(2deg);z-index:2}
   .exhibit .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7f8a7f;margin-bottom:10px}
   .exhibit pre{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:15px;line-height:1.5}
   .exhibit .cap{margin-top:12px;font-size:12px;color:#7f8a7f}
@@ -112,6 +115,17 @@
     box-shadow:2px 6px 12px rgba(0,0,0,.4);transform:rotate(calc(var(--r,0deg)*2.6))}
   .poster:before{content:"";position:absolute;top:6px;left:50%;margin-left:-5px;width:10px;height:10px;border-radius:50%;
     background:radial-gradient(circle at 35% 30%, #d96a5c, var(--stamp) 60%, #6d1f18);box-shadow:0 2px 3px rgba(0,0,0,.35)}
+  .posters .poster:nth-child(1){transform:rotate(-2.4deg) translateY(3px)}
+  .posters .poster:nth-child(2){transform:rotate(1.8deg) translateY(-3px)}
+  .posters .poster:nth-child(3){transform:rotate(3.1deg) translateY(6px)}
+  .posters .poster:nth-child(4){transform:rotate(-1.1deg) translateY(-1px)}
+  .posters .poster:nth-child(5){transform:rotate(2.6deg) translateY(-5px)}
+  .posters .poster:nth-child(6){transform:rotate(-3.2deg) translateY(2px)}
+  .posters .poster:nth-child(7){transform:rotate(.9deg) translateY(7px)}
+  .posters .poster:nth-child(8){transform:rotate(-1.9deg) translateY(-4px)}
+  .posters .poster:nth-child(9){transform:rotate(2.3deg) translateY(1px)}
+  .posters .poster:nth-child(10){transform:rotate(-2.8deg) translateY(5px)}
+  .posters .poster:nth-child(11){transform:rotate(1.4deg) translateY(-2px)}
   .poster .miss{font-size:10px;letter-spacing:.22em;color:var(--red);font-weight:700}
   .poster .day{font-family:Georgia,serif;font-size:30px;margin:6px 0 2px}
   .poster .mon{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
@@ -120,8 +134,11 @@
   /* the records clipboard */
   .checker{margin-top:24px;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:24px;max-width:640px;
     box-shadow:0 10px 28px rgba(0,0,0,.45);transform:rotate(.4deg);position:relative}
-  .checker:before{content:"";position:absolute;top:-14px;left:50%;margin-left:-40px;width:80px;height:22px;
-    background:linear-gradient(180deg,#8f8f8f,#6e6e6e);border-radius:4px;box-shadow:0 3px 5px rgba(0,0,0,.4)}
+  .checker:before{content:"";position:absolute;top:-15px;left:50%;margin-left:-55px;width:110px;height:26px;
+    background:linear-gradient(180deg,#c2c2c2,#8a8a8a 55%,#6e6e6e);border:1px solid #565656;
+    border-radius:13px 13px 4px 4px;box-shadow:0 3px 6px rgba(0,0,0,.45)}
+  .checker:after{content:"";position:absolute;top:-4px;left:50%;margin-left:-17px;width:34px;height:10px;
+    background:linear-gradient(180deg,#9c9c9c,#787878);border:1px solid #5c5c5c;border-radius:2px}
   .checker label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6a58;margin-bottom:8px}
   .row{display:flex;gap:10px;flex-wrap:wrap}
   input[type=date]{font-size:15px;padding:9px 11px;border:1px solid #6f6a58;background:#fff;min-width:190px;color:var(--ink)}
@@ -133,10 +150,10 @@
   .finding b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
 
   /* related: index cards */
-  .related{margin-top:24px;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:20px 22px;max-width:640px;
+  .related{margin-top:24px;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:24px 22px 20px;max-width:640px;
     box-shadow:0 10px 26px rgba(0,0,0,.45);position:relative;
     background-image:repeating-linear-gradient(180deg,transparent 0 27px,rgba(176,54,44,.12) 27px 28px)}
-  .related:before{content:"";position:absolute;top:-6px;left:24px;width:11px;height:11px;border-radius:50%;
+  .related:before{content:"";position:absolute;top:6px;left:50%;margin-left:-5px;width:11px;height:11px;border-radius:50%;
     background:radial-gradient(circle at 35% 30%, #d96a5c, var(--stamp) 60%, #6d1f18);box-shadow:0 2px 3px rgba(0,0,0,.4)}
   .related:nth-of-type(odd){transform:rotate(-.6deg)}
   .related:nth-of-type(even){transform:rotate(.7deg)}
@@ -150,7 +167,7 @@
 
   @media (max-width:640px){
     .strings{display:none}
-    header .wrap,.lead .wrap,.checker,.exhibit,.related,.poster{transform:none}
+    header .wrap,.lead .wrap,.checker,.exhibit,.related{transform:none}
     body{padding-top:24px}
   }
 </style>
@@ -295,6 +312,33 @@ Su Mo Tu We Th Fr Sa
         +'This date occurred, or is scheduled to occur, subject to the calendar remaining in service. The Commission finds no irregularities and is mildly disappointed.';
     }
   });
+})();
+
+(function(){
+  var board = document.querySelector('.board');
+  if(!board) return;
+  var strs = board.querySelectorAll('.str');
+  var pairs = [[0,6],[3,9],[5,10]];
+  function pin(el, br){
+    var r = el.getBoundingClientRect();
+    return [r.left + r.width/2 - br.left, r.top + 11 - br.top];
+  }
+  function lay(){
+    var posters = board.querySelectorAll('.poster');
+    if(posters.length < 11) return;
+    var br = board.getBoundingClientRect();
+    pairs.forEach(function(p, i){
+      var s = strs[i]; if(!s) return;
+      var a = pin(posters[p[0]], br), b = pin(posters[p[1]], br);
+      var dx = b[0]-a[0], dy = b[1]-a[1];
+      s.style.left = a[0]+'px';
+      s.style.top = a[1]+'px';
+      s.style.width = Math.sqrt(dx*dx+dy*dy)+'px';
+      s.style.transform = 'rotate('+(Math.atan2(dy,dx)*180/Math.PI)+'deg)';
+    });
+  }
+  lay();
+  window.addEventListener('resize', lay);
 })();
 </script>
 </body>
