@@ -96,7 +96,7 @@
   .str:before{left:-3px}
   .str:after{right:-3px}
   .posters{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;position:relative;z-index:1}
-  .poster{background:var(--card);color:var(--ink);border:0;padding:14px 12px;text-align:center;position:relative;
+  .poster{background:var(--card);color:var(--ink);border:0;padding:20px 12px 14px;text-align:center;position:relative;
     box-shadow:0 8px 20px rgba(0,0,0,.4);
     transform:rotate(calc(var(--r,0deg)*2.6))}
   .posters .poster:nth-child(1){transform:rotate(-2.4deg) translateY(3px)}
@@ -129,13 +129,39 @@
   .finding b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
 
   /* related: index cards */
-  .related{margin-top:24px;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:20px 22px;max-width:640px;
+  .related{margin-top:28px;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:24px 22px 20px;max-width:640px;
     box-shadow:0 10px 24px rgba(0,0,0,.35);position:relative}
   .related:nth-of-type(odd){transform:rotate(-.6deg)}
   .related:nth-of-type(even){transform:rotate(.7deg)}
   .related .no{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6a58}
   .related h3{font-family:Georgia,serif;font-size:18px;margin:4px 0 6px}
   .related p{font-size:13.5px;color:#57534a}
+
+
+  /* illustrated pushpins: one drawing, many leans */
+  .poster:before,.related:before,header .wrap:before,header .wrap:after,.lead .wrap:before{
+    content:"";position:absolute;width:25px;height:32px;z-index:2;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 32'%3E%3Cpath d='M11.3 19 L12.9 19 L12.3 30 Z' fill='%23848484'/%3E%3Cpath d='M9 14 h6 l1.8 5.4 h-9.6 Z' fill='%23a83228'/%3E%3Cellipse cx='12' cy='8.5' rx='8.2' ry='7' fill='%23c0392b'/%3E%3Cellipse cx='12' cy='13.6' rx='6.2' ry='1.8' fill='%238e241a'/%3E%3Cellipse cx='9.6' cy='5.6' rx='3.4' ry='2.2' fill='%23e06a55' opacity='.9'/%3E%3Cellipse cx='8.6' cy='4.6' rx='1.3' ry='0.9' fill='%23ffffff' opacity='.75'/%3E%3C/svg%3E") no-repeat center/contain;
+    filter:drop-shadow(3px 4px 2px rgba(0,0,0,.3));
+    transform-origin:50% 94%}
+  .poster:before{top:-16px;left:50%;margin-left:-12px}
+  .posters .poster:nth-child(1):before{transform:rotate(-24deg);margin-left:-20px}
+  .posters .poster:nth-child(2):before{transform:rotate(13deg) scaleX(-1);margin-left:-4px}
+  .posters .poster:nth-child(3):before{transform:rotate(-6deg);margin-left:-14px}
+  .posters .poster:nth-child(4):before{transform:rotate(22deg);margin-left:-2px}
+  .posters .poster:nth-child(5):before{transform:rotate(-17deg) scaleX(-1);margin-left:-22px}
+  .posters .poster:nth-child(6):before{transform:rotate(4deg);margin-left:-8px}
+  .posters .poster:nth-child(7):before{transform:rotate(-28deg);margin-left:-18px}
+  .posters .poster:nth-child(8):before{transform:rotate(17deg) scaleX(-1);margin-left:-6px}
+  .posters .poster:nth-child(9):before{transform:rotate(-11deg);margin-left:-16px}
+  .posters .poster:nth-child(10):before{transform:rotate(26deg);margin-left:0}
+  .posters .poster:nth-child(11):before{transform:rotate(-3deg) scaleX(-1);margin-left:-10px}
+  header .wrap:before{top:-15px;left:26px;transform:rotate(-19deg)}
+  header .wrap:after{top:-14px;left:auto;right:30px;transform:rotate(23deg) scaleX(-1)}
+  .lead .wrap:before{top:-16px;left:42%;transform:rotate(8deg)}
+  .related:before{top:-15px;left:50%;margin-left:-12px}
+  .related:nth-of-type(odd):before{transform:rotate(-14deg);margin-left:-20px}
+  .related:nth-of-type(even):before{transform:rotate(18deg) scaleX(-1);margin-left:-4px}
 
   footer{padding:36px 0 20px;font-size:12.5px;color:var(--muted)}
   footer .doc{letter-spacing:.16em;text-transform:uppercase;font-size:11px}
