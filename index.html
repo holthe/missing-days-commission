@@ -11,7 +11,7 @@
      below and the footer of tools/og.html, then re-run `make og`. Those are
      the only two files that name it; nothing derives it. -->
 <link rel="canonical" href="https://missingdays.org/">
-<meta name="theme-color" content="#ddd2b4">
+<meta name="theme-color" content="#25282a">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16">
@@ -37,79 +37,122 @@
 <title>The Missing Days Commission | Case 1752-09: OPEN</title>
 <style>
   :root{
-    --kraft:#e9e0c9; --kraft-dark:#ddd2b4; --ink:#2c2a24; --red:#b0362c;
-    --stamp:#a02e24; --muted:#6f6a58; --line:#c9bd9d; --paper:#f6f1e2;
+    --wall:#25282a; --wall-deep:#1c1f21; --cork:#8a6136; --cork-dk:#6e4c29;
+    --paper:#f6f1e2; --card:#fffdf4; --ink:#2c2a24; --red:#b0362c;
+    --stamp:#a02e24; --string:#c0392b; --muted:#9a978a; --line:#c9bd9d;
+    --cream:#ddd8c6;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6;padding:34px 10px 60px;
-    background:#57503f radial-gradient(90% 60% at 50% 0%, rgba(255,244,214,.08), transparent 70%)}
-  .typed{font-family:"Courier New",Courier,monospace}
-  .folder{max-width:940px;margin:0 auto;background:var(--kraft);position:relative;
-    border:1px solid #b3a578;box-shadow:0 18px 50px rgba(0,0,0,.4), 0 2px 0 #cdbf98 inset}
-  .folder:before{content:"CASE NO. 1752-09";position:absolute;top:-31px;left:26px;
-    background:var(--kraft);border:1px solid #b3a578;border-bottom:none;
-    font-family:"Courier New",Courier,monospace;font-size:12px;letter-spacing:.18em;
-    padding:6px 22px 4px;color:var(--muted)}
-  .folder:after{content:"";position:absolute;top:-31px;left:210px;right:0;height:31px;
-    border-bottom:1px solid transparent}
-  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  body{color:var(--cream);font-family:Georgia,"Times New Roman",serif;line-height:1.6;padding:40px 12px 70px;
+    background:var(--wall) radial-gradient(120% 90% at 50% 0%, rgba(255,244,214,.06), transparent 65%)}
   .serif{font-family:Georgia,"Times New Roman",serif}
   header .unit,.caseline,.stamp,.kicker,footer .doc,.checker label,.finding b,
   .exhibit .lbl,.exhibit .cap,.related .no,.poster .miss,.poster .mon,.poster .seen,
   input[type=date],button{font-family:"Courier New",Courier,monospace}
-  a{color:var(--red)}
-  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px}
+  a{color:#e0a189}
+  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--string);outline-offset:2px}
 
-  header{border-bottom:3px double var(--ink);padding:44px 0 34px;background:var(--kraft-dark)}
-  header .unit{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-  header h1{font-family:Georgia,serif;font-size:clamp(28px,5.6vw,46px);margin-top:8px}
-  header .caseline{margin-top:10px;font-size:13px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .stamp{display:inline-block;border:3px solid var(--stamp);color:var(--stamp);font-weight:700;letter-spacing:.18em;padding:4px 14px;transform:rotate(-4deg);text-transform:uppercase;font-size:14px;background:rgba(255,255,255,.25);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+  .folder{max-width:980px;margin:0 auto}
+  .folder:before,.folder:after{content:none}
 
-  .lead{padding:42px 0;border-bottom:1px solid var(--line)}
-  .lead p{max-width:640px;font-size:17px}
-  .lead p + p{margin-top:12px;color:var(--muted)}
+  /* the case plate, pinned to the wall */
+  header{padding:0 0 14px}
+  header .wrap{background:var(--card);color:var(--ink);max-width:660px;padding:30px 34px 26px;
+    transform:rotate(-.8deg);box-shadow:0 12px 34px rgba(0,0,0,.5);position:relative}
+  header .wrap:before,header .wrap:after{content:"";position:absolute;top:10px;width:11px;height:11px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #d96a5c, var(--stamp) 60%, #6d1f18);box-shadow:0 2px 3px rgba(0,0,0,.4)}
+  header .wrap:before{left:16px}
+  header .wrap:after{right:16px}
+  header .unit{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#6f6a58}
+  header h1{font-family:Georgia,serif;font-size:clamp(26px,5vw,42px);margin-top:8px}
+  header .caseline{margin-top:12px;font-size:13px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .stamp{display:inline-block;border:3px solid var(--stamp);color:var(--stamp);font-weight:700;letter-spacing:.18em;padding:4px 14px;transform:rotate(-4deg);text-transform:uppercase;font-size:14px;background:rgba(255,255,255,.25)}
 
-  section{padding:44px 0;border-bottom:1px solid var(--line)}
-  .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:700}
-  section h2{font-family:Georgia,serif;font-size:25px;margin:6px 0 8px}
-  section p.intro{color:var(--muted);max-width:620px;font-size:14.5px}
+  /* typed memo taped below the plate */
+  .lead{padding:34px 0 8px}
+  .lead .wrap{background:var(--paper);color:var(--ink);max-width:640px;padding:26px 30px;
+    transform:rotate(.5deg);box-shadow:0 10px 28px rgba(0,0,0,.45);position:relative;
+    font-family:"Courier New",Courier,monospace}
+  .lead .wrap:before{content:"";position:absolute;top:-12px;left:50%;margin-left:-46px;width:92px;height:24px;
+    background:rgba(255,255,255,.28);border-left:1px solid rgba(0,0,0,.08);border-right:1px solid rgba(0,0,0,.08);
+    transform:rotate(-2deg)}
+  .lead p{max-width:640px;font-size:14px}
+  .lead p + p{margin-top:12px;color:#6f6a58}
 
-  .exhibit{margin-top:22px;background:#101210;color:#c9d1c9;padding:22px;border:6px solid var(--paper);box-shadow:0 2px 8px rgba(0,0,0,.25);max-width:460px}
+  section{padding:46px 0 40px;border-bottom:0}
+  .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#e0a189;font-weight:700}
+  section h2{font-family:Georgia,serif;font-size:25px;margin:6px 0 8px;color:#f0ead6}
+  section p.intro{color:var(--muted);max-width:620px;font-size:15px}
+
+  /* exhibit: a printout taped to the wall */
+  .exhibit{margin-top:22px;background:#101210;color:#c9d1c9;padding:22px;border:8px solid var(--card);
+    box-shadow:0 12px 30px rgba(0,0,0,.55);max-width:460px;transform:rotate(-1deg);position:relative}
+  .exhibit:before{content:"";position:absolute;top:-22px;left:50%;margin-left:-46px;width:92px;height:24px;
+    background:rgba(255,255,255,.22);transform:rotate(2deg)}
   .exhibit .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7f8a7f;margin-bottom:10px}
   .exhibit pre{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:15px;line-height:1.5}
   .exhibit .cap{margin-top:12px;font-size:12px;color:#7f8a7f}
-  .evidence-note{margin-top:14px;font-size:13px;color:var(--muted);max-width:600px}
+  .evidence-note{margin-top:16px;font-size:13.5px;color:var(--muted);max-width:600px}
 
-  .posters{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:24px}
-  .poster{background:var(--paper);border:1px solid var(--line);padding:18px 12px 14px;text-align:center;position:relative;
-    box-shadow:2px 5px 10px rgba(0,0,0,.22);transform:rotate(calc(var(--r,0deg)*2.4))}
+  /* the corkboard */
+  .board{margin-top:24px;position:relative;padding:26px 22px;border:10px solid #4a3420;background:
+    radial-gradient(circle at 20% 30%, rgba(0,0,0,.12) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(0,0,0,.10) 0 2px, transparent 3px),
+    linear-gradient(180deg,#96703f,var(--cork) 60%,#7c5630);
+    box-shadow:0 14px 36px rgba(0,0,0,.5), inset 0 0 40px rgba(0,0,0,.25)}
+  .strings{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+  .str{position:absolute;height:2px;background:var(--string);box-shadow:0 1px 2px rgba(0,0,0,.5);transform-origin:left center}
+  .str:before,.str:after{content:"";position:absolute;top:-4px;width:10px;height:10px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #d96a5c, var(--stamp) 60%, #6d1f18);box-shadow:0 2px 3px rgba(0,0,0,.45)}
+  .str:before{left:-4px}
+  .str:after{right:-4px}
+  .posters{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;position:relative;z-index:1}
+  .poster{background:var(--card);color:var(--ink);border:1px solid var(--line);padding:18px 12px 14px;text-align:center;position:relative;
+    box-shadow:2px 6px 12px rgba(0,0,0,.4);transform:rotate(calc(var(--r,0deg)*2.6))}
   .poster:before{content:"";position:absolute;top:6px;left:50%;margin-left:-5px;width:10px;height:10px;border-radius:50%;
     background:radial-gradient(circle at 35% 30%, #d96a5c, var(--stamp) 60%, #6d1f18);box-shadow:0 2px 3px rgba(0,0,0,.35)}
   .poster .miss{font-size:10px;letter-spacing:.22em;color:var(--red);font-weight:700}
   .poster .day{font-family:Georgia,serif;font-size:30px;margin:6px 0 2px}
   .poster .mon{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
-  .poster .seen{margin-top:8px;font-size:10.5px;color:var(--muted);border-top:1px dotted var(--line);padding-top:7px}
+  .poster .seen{margin-top:8px;font-size:10.5px;color:#6f6a58;border-top:1px dotted var(--line);padding-top:7px}
 
-  .checker{margin-top:24px;background:var(--paper);border:1px solid var(--line);padding:24px;max-width:640px}
-  .checker label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  /* the records clipboard */
+  .checker{margin-top:24px;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:24px;max-width:640px;
+    box-shadow:0 10px 28px rgba(0,0,0,.45);transform:rotate(.4deg);position:relative}
+  .checker:before{content:"";position:absolute;top:-14px;left:50%;margin-left:-40px;width:80px;height:22px;
+    background:linear-gradient(180deg,#8f8f8f,#6e6e6e);border-radius:4px;box-shadow:0 3px 5px rgba(0,0,0,.4)}
+  .checker label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6a58;margin-bottom:8px}
   .row{display:flex;gap:10px;flex-wrap:wrap}
-  input[type=date]{font:inherit;font-size:15px;padding:9px 11px;border:1px solid var(--muted);background:#fff;min-width:190px}
-  button{font:inherit;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;background:var(--ink);color:var(--kraft);border:0;padding:11px 22px;cursor:pointer}
+  input[type=date]{font-size:15px;padding:9px 11px;border:1px solid #6f6a58;background:#fff;min-width:190px;color:var(--ink)}
+  button{font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;background:var(--ink);color:#e9e0c9;border:0;padding:11px 22px;cursor:pointer}
   button:hover{background:#454238}
   .finding{margin-top:16px;padding:16px;border-left:5px solid;display:none;background:#fff;font-size:14px}
   .finding.exists{border-color:#4c7a4f;display:block}
   .finding.gone{border-color:var(--red);display:block}
   .finding b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
 
-  .related{margin-top:22px;background:var(--paper);border:1px dashed var(--muted);padding:20px;max-width:640px}
-  .related .no{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  /* related: index cards */
+  .related{margin-top:24px;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:20px 22px;max-width:640px;
+    box-shadow:0 10px 26px rgba(0,0,0,.45);position:relative;
+    background-image:repeating-linear-gradient(180deg,transparent 0 27px,rgba(176,54,44,.12) 27px 28px)}
+  .related:before{content:"";position:absolute;top:-6px;left:24px;width:11px;height:11px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #d96a5c, var(--stamp) 60%, #6d1f18);box-shadow:0 2px 3px rgba(0,0,0,.4)}
+  .related:nth-of-type(odd){transform:rotate(-.6deg)}
+  .related:nth-of-type(even){transform:rotate(.7deg)}
+  .related .no{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6a58}
   .related h3{font-family:Georgia,serif;font-size:18px;margin:4px 0 6px}
-  .related p{font-size:13.5px;color:var(--muted)}
+  .related p{font-size:13.5px;color:#57534a}
 
-  footer{padding:32px 0 50px;font-size:12px;color:var(--muted)}
+  footer{padding:36px 0 20px;font-size:12.5px;color:var(--muted)}
   footer .doc{letter-spacing:.16em;text-transform:uppercase;font-size:11px}
   footer p{margin-top:8px;max-width:700px}
+
+  @media (max-width:640px){
+    .strings{display:none}
+    header .wrap,.lead .wrap,.checker,.exhibit,.related,.poster{transform:none}
+    body{padding-top:24px}
+  }
 </style>
 </head>
 <body>
@@ -158,7 +201,14 @@ Su Mo Tu We Th Fr Sa
     <div class="kicker">Public appeal</div>
     <h2>Have you seen these days?</h2>
     <p class="intro">Descriptions follow. All eleven were Julian, of average length, and answered to ordinal names. Reward for information: eleven days, payable in kind, never.</p>
-    <div class="posters" id="posters"></div>
+    <div class="board">
+      <div class="strings" aria-hidden="true">
+        <i class="str" style="top:18%;left:4%;width:70%;transform:rotate(9deg)"></i>
+        <i class="str" style="top:64%;left:12%;width:78%;transform:rotate(-7deg)"></i>
+        <i class="str" style="top:38%;left:30%;width:58%;transform:rotate(14deg)"></i>
+      </div>
+      <div class="posters" id="posters"></div>
+    </div>
   </div>
 </section>
 
