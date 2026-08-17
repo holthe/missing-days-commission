@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cold cases, calendrical. Investigating the disappearance of September 3-13, 1752, eleven days last seen under the Julian calendar. The case remains open on principle.">
+<meta name="robots" content="index, follow">
+
+<!-- PRODUCTION DOMAIN, hardcoded. missingdays.org is a candidate, not
+     purchased. If the site lands elsewhere, change the four absolute URLs
+     below and the footer of tools/og.html, then re-run `make og`. Those are
+     the only two files that name it; nothing derives it. -->
+<link rel="canonical" href="https://missingdays.org/">
+<meta name="theme-color" content="#ddd2b4">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Missing Days Commission">
+<meta property="og:url" content="https://missingdays.org/">
+<meta property="og:title" content="The Missing Days Commission">
+<meta property="og:description" content="Case 1752-09: eleven days, still missing. The Commission keeps the file open.">
+<meta property="og:image" content="https://missingdays.org/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Missing Days Commission: a kraft-paper case file with a red CASE OPEN stamp for case number 1752-09, eleven days missing since September 2, 1752.">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Missing Days Commission">
+<meta name="twitter:description" content="Case 1752-09: eleven days, still missing. The Commission keeps the file open.">
+<meta name="twitter:image" content="https://missingdays.org/og.png">
+<meta name="twitter:image:alt" content="The Missing Days Commission: a kraft-paper case file with a red CASE OPEN stamp for case number 1752-09, eleven days missing since September 2, 1752.">
+<title>The Missing Days Commission | Case 1752-09: OPEN</title>
+<style>
+  :root{
+    --kraft:#e9e0c9; --kraft-dark:#ddd2b4; --ink:#2c2a24; --red:#b0362c;
+    --stamp:#a02e24; --muted:#6f6a58; --line:#c9bd9d; --paper:#f6f1e2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--kraft);color:var(--ink);font-family:"Courier New",Courier,monospace;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  .serif{font-family:Georgia,"Times New Roman",serif}
+  a{color:var(--red)}
+  button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+  header{border-bottom:3px double var(--ink);padding:38px 0 30px;background:var(--kraft-dark)}
+  header .unit{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  header h1{font-family:Georgia,serif;font-size:clamp(24px,5vw,38px);margin-top:8px}
+  header .caseline{margin-top:10px;font-size:13px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .stamp{display:inline-block;border:3px solid var(--stamp);color:var(--stamp);font-weight:700;letter-spacing:.18em;padding:3px 12px;transform:rotate(-4deg);text-transform:uppercase;font-size:13px;background:rgba(255,255,255,.25)}
+
+  .lead{padding:42px 0;border-bottom:1px solid var(--line)}
+  .lead p{max-width:640px;font-size:15.5px}
+  .lead p + p{margin-top:12px;color:var(--muted)}
+
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:700}
+  section h2{font-family:Georgia,serif;font-size:25px;margin:6px 0 8px}
+  section p.intro{color:var(--muted);max-width:620px;font-size:14.5px}
+
+  .exhibit{margin-top:22px;background:#101210;color:#c9d1c9;padding:22px;border:6px solid var(--paper);box-shadow:0 2px 8px rgba(0,0,0,.25);max-width:460px}
+  .exhibit .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7f8a7f;margin-bottom:10px}
+  .exhibit pre{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:15px;line-height:1.5}
+  .exhibit .cap{margin-top:12px;font-size:12px;color:#7f8a7f}
+  .evidence-note{margin-top:14px;font-size:13px;color:var(--muted);max-width:600px}
+
+  .posters{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:24px}
+  .poster{background:var(--paper);border:1px solid var(--line);padding:14px 12px;text-align:center;box-shadow:1px 2px 4px rgba(0,0,0,.12);transform:rotate(var(--r,0deg))}
+  .poster .miss{font-size:10px;letter-spacing:.22em;color:var(--red);font-weight:700}
+  .poster .day{font-family:Georgia,serif;font-size:30px;margin:6px 0 2px}
+  .poster .mon{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .poster .seen{margin-top:8px;font-size:10.5px;color:var(--muted);border-top:1px dotted var(--line);padding-top:7px}
+
+  .checker{margin-top:24px;background:var(--paper);border:1px solid var(--line);padding:24px;max-width:640px}
+  .checker label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  input[type=date]{font:inherit;font-size:15px;padding:9px 11px;border:1px solid var(--muted);background:#fff;min-width:190px}
+  button{font:inherit;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;background:var(--ink);color:var(--kraft);border:0;padding:11px 22px;cursor:pointer}
+  button:hover{background:#454238}
+  .finding{margin-top:16px;padding:16px;border-left:5px solid;display:none;background:#fff;font-size:14px}
+  .finding.exists{border-color:#4c7a4f;display:block}
+  .finding.gone{border-color:var(--red);display:block}
+  .finding b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
+
+  .related{margin-top:22px;background:var(--paper);border:1px dashed var(--muted);padding:20px;max-width:640px}
+  .related .no{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .related h3{font-family:Georgia,serif;font-size:18px;margin:4px 0 6px}
+  .related p{font-size:13.5px;color:var(--muted)}
+
+  footer{padding:32px 0 50px;font-size:12px;color:var(--muted)}
+  footer .doc{letter-spacing:.16em;text-transform:uppercase;font-size:11px}
+  footer p{margin-top:8px;max-width:700px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="unit">Cold Cases, Calendrical</div>
+    <h1>The Missing Days Commission</h1>
+    <div class="caseline">
+      <span class="stamp">Case Open</span>
+      <span>CASE NO. 1752-09 · ELEVEN DAYS · LAST SEEN: WEDNESDAY, SEPTEMBER 2, 1752</span>
+    </div>
+  </div>
+</header>
+
+<div class="lead">
+  <div class="wrap">
+    <p>On the evening of September 2, 1752, the people of Britain and its colonies went to bed. They woke on September 14. The days of September 3 through 13 were never seen again. No bodies were recovered, because no days occurred in which to recover them.</p>
+    <p>The official account blames the Calendar (New Style) Act 1750, which moved Britain from the Julian to the Gregorian calendar, deleting eleven days to correct a drift of centuries. The Commission accepts this account and keeps the case open anyway, on principle.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Evidence</div>
+    <h2>Exhibit A</h2>
+    <p class="intro">Every Unix system ships with a witness. Run "cal 9 1752" on a terminal near you and it will testify, as it has for fifty years, without being asked twice.</p>
+    <div class="exhibit">
+      <div class="lbl">Exhibit A · Terminal output · Unmodified</div>
+      <pre>$ cal 9 1752
+   September 1752
+Su Mo Tu We Th Fr Sa
+       1  2 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30</pre>
+      <div class="cap">The gap between 2 and 14 is not a rendering error. It is the scene of the incident, preserved in every POSIX system as a matter of record.</div>
+    </div>
+    <p class="evidence-note">The Commission notes that this is one of the few crime scenes that can be visited from any laptop, and asks visitors not to touch anything, particularly the locale settings.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Public appeal</div>
+    <h2>Have you seen these days?</h2>
+    <p class="intro">Descriptions follow. All eleven were Julian, of average length, and answered to ordinal names. Reward for information: eleven days, payable in kind, never.</p>
+    <div class="posters" id="posters"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Records service</div>
+    <h2>Verify a date against the British record</h2>
+    <p class="intro">Enter any date. The Commission will confirm whether it occurred in Britain and its colonies, or whether it is among the missing.</p>
+    <div class="checker">
+      <label for="dateIn">Date to verify</label>
+      <div class="row">
+        <input type="date" id="dateIn" value="1752-09-08" min="1600-01-01" max="2100-12-31">
+        <button id="verifyBtn">Check the record</button>
+      </div>
+      <div class="finding" id="finding"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Related files</div>
+    <h2>Adjacent incidents</h2>
+    <div class="related">
+      <div class="no">Case 1712-02-30 · SWEDEN · CLOSED, REGRETTABLY SOLVED</div>
+      <h3>The Day That Should Not Exist</h3>
+      <p>Sweden attempted a gradual calendar transition, lost track midway, and corrected course by inserting February 30, 1712, a date that has occurred exactly once in a legally recognized calendar. The Commission does not investigate surplus days, but keeps the file as a reminder that the alternative to losing eleven days is worse.</p>
+    </div>
+    <div class="related">
+      <div class="no">Case 1752-RIOT · DISPUTED · FILED UNDER FOLKLORE</div>
+      <h3>"Give us our eleven days"</h3>
+      <p>Popular history records mobs rioting for the return of the stolen days. Modern historians find little evidence the riots happened, tracing the story largely to a Hogarth painting. The Commission cannot confirm the riots. The Commission understands the impulse.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="doc">DOC: BEI-012 · REV 1.0 / FINAL / FILED SEPTEMBER 3, 1752 (PENDING)</div>
+    <p>The Missing Days Commission is a division of <a href="https://besteffortindustries.com">Best Effort Industries</a>. The calendar facts on this page are real: the Calendar (New Style) Act 1750, the eleven-day adjustment of September 1752, Sweden's February 30, 1712, and the cal output are all part of the historical and technical record. The Commission itself is not, and files accordingly.</p>
+    <p>Anyone with information regarding the whereabouts of September 3-13, 1752 is asked to keep it to themselves, as the case being solved would end the Commission's funding of £0.</p>
+    <p>© 1752 (OLD STYLE) THE MISSING DAYS COMMISSION · TIME PASSES. SOMETIMES IT SKIPS.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var posters = document.getElementById('posters');
+  var ords = ['3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th','13th'];
+  for(var d=3; d<=13; d++){
+    var el = document.createElement('div');
+    el.className='poster';
+    el.style.setProperty('--r', ((d*7)%5-2)*0.9+'deg');
+    el.innerHTML = '<div class="miss">MISSING</div>'
+      +'<div class="day serif">'+d+'</div>'
+      +'<div class="mon">September 1752</div>'
+      +'<div class="seen">The '+ords[d-3]+'. Never occurred. Presumed Gregorian.</div>';
+    posters.appendChild(el);
+  }
+
+  var finding = document.getElementById('finding');
+  document.getElementById('verifyBtn').addEventListener('click', function(){
+    var v = document.getElementById('dateIn').value;
+    if(!v){ finding.className='finding gone'; finding.innerHTML='<b>Record incomplete</b>No date supplied. The Commission has enough missing dates already.'; return; }
+    var p = v.split('-').map(Number);
+    var y=p[0], m=p[1], d=p[2];
+    if(y===1752 && m===9 && d>=3 && d<=13){
+      finding.className='finding gone';
+      finding.innerHTML='<b>DATE MISSING · MATCHES CASE 1752-09</b>'
+        +'September '+d+', 1752 did not occur in Britain or its colonies. Nothing happened on this date, no one was born, no one died, and no rent was owed, a point landlords of the era disputed with great energy. If you have memories of this date, report to the nearest calendar authority and remain calm.';
+    } else if(y===1712 && m===2 && d===30){
+      finding.className='finding exists';
+      finding.innerHTML='<b>DATE CONFIRMED · SWEDEN ONLY</b>'
+        +'February 30, 1712 occurred exactly once, in Sweden, as a correction to a correction. The Commission verifies this date with the note that it should not be attempted again.';
+    } else if(y===1752 && (m<9 || (m===9 && d<3))){
+      finding.className='finding exists';
+      finding.innerHTML='<b>Date confirmed (Old Style)</b>'
+        +'This date occurred under the Julian calendar in Britain. It existed, but it was eleven days out of step with most of Europe, a condition the era referred to as normal.';
+    } else {
+      finding.className='finding exists';
+      finding.innerHTML='<b>Date confirmed</b>'
+        +'This date occurred, or is scheduled to occur, subject to the calendar remaining in service. The Commission finds no irregularities and is mildly disappointed.';
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>The Missing Days Commission</title>
+  <rect width="64" height="64" fill="#e9e0c9"/>
+  <rect x="10" y="8" width="44" height="48" fill="#f6f1e2" stroke="#2c2a24" stroke-width="2.5"/>
+  <rect x="10" y="8" width="44" height="10" fill="#2c2a24"/>
+  <g fill="#2c2a24">
+    <rect x="16" y="24" width="6" height="6"/>
+    <rect x="26" y="24" width="6" height="6"/>
+    <rect x="36" y="24" width="6" height="6"/>
+    <rect x="46" y="24" width="6" height="6"/>
+    <rect x="16" y="34" width="6" height="6"/>
+    <rect x="46" y="34" width="6" height="6"/>
+    <rect x="16" y="44" width="6" height="6"/>
+    <rect x="26" y="44" width="6" height="6"/>
+    <rect x="36" y="44" width="6" height="6"/>
+    <rect x="46" y="44" width="6" height="6"/>
+  </g>
+  <rect x="25" y="32" width="19" height="10" fill="none" stroke="#a02e24" stroke-width="2.5" transform="rotate(-5 34.5 37)"/>
+</svg>

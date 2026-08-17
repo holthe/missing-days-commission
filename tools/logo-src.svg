@@ -1,0 +1,21 @@
+<!-- Source for assets/logo.svg. Text is still live here; `make logo` runs
+     Inkscape with export-text-to-path so the committed logo does not depend
+     on the viewer's fonts. Georgia is installed on this machine; Courier
+     New resolves through fontconfig to Liberation Mono, which is
+     metric-compatible (see the README's font note). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 400" width="1240" height="400" role="img" aria-label="The Missing Days Commission">
+  <rect width="1240" height="400" fill="#e9e0c9"/>
+  <g stroke="#2c2a24">
+    <line x1="0" y1="8" x2="1240" y2="8" stroke-width="3"/>
+    <line x1="0" y1="16" x2="1240" y2="16" stroke-width="1.5"/>
+    <line x1="0" y1="384" x2="1240" y2="384" stroke-width="1.5"/>
+    <line x1="0" y1="392" x2="1240" y2="392" stroke-width="3"/>
+  </g>
+  <text x="620" y="84" text-anchor="middle" font-family="Liberation Mono, Courier New, monospace" font-size="20" letter-spacing="8" fill="#6f6a58">COLD CASES, CALENDRICAL</text>
+  <text x="620" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="74" fill="#2c2a24">The Missing Days Commission</text>
+  <text x="620" y="234" text-anchor="middle" font-family="Liberation Mono, Courier New, monospace" font-size="21" letter-spacing="2" fill="#2c2a24">CASE NO. 1752-09 &#183; ELEVEN DAYS &#183; LAST SEEN SEPTEMBER 2, 1752</text>
+  <g transform="rotate(-4 620 310)">
+    <rect x="507" y="278" width="226" height="60" fill="#ffffff" fill-opacity="0.25" stroke="#a02e24" stroke-width="5"/>
+    <text x="620" y="319" text-anchor="middle" font-family="Liberation Mono, Courier New, monospace" font-weight="bold" font-size="30" letter-spacing="8" fill="#a02e24">CASE OPEN</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+# Crawl freely. The Commission welcomes any index that might
+# turn up the missing material.
+
+User-agent: *
+Allow: /
+
+# There is no sitemap. There is one page and a 404.
+# If your crawler finds September 3-13, 1752, contact us immediately.
+# Do not attempt to fetch those dates yourself.
