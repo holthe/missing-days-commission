@@ -205,11 +205,11 @@ Until then the site is reachable at `missingdays.pages.dev`.
 ### Related
 
 The Commission is a division of
-[Best Effort Industries](https://besteffortindustries.com) and is
-registered as division 012 in the operating divisions table in that
-repository's `index.html`, in agreement with the document number in the
-site's own footer, an alignment the Commission regards as suspicious and
-has opened a file on.
+[Best Effort Industries](https://besteffortindustries.com), currently
+queued in that register's Schedule B under a provisional number. Real
+division numbers are assigned by the register on entry into service and
+are recorded nowhere else; the Commission is at peace with numbers that
+may later vanish, given its caseload.
 
 ## License
 
