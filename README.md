@@ -77,7 +77,7 @@ so there are no webfonts to host or wait for.
 
 ### The production domain
 
-The site is served at `missingdays.pages.dev`, and that is the host every absolute
+The site is served at `missingdays.besteffortindustries.com`, and that is the host every absolute
 URL on the page points at, so link previews resolve. `missingdays.org` remains
 the candidate domain and has not been purchased; if the site is
 promoted, either to that domain or to a subdomain of the parent
@@ -197,14 +197,14 @@ registered:
 2. **Attach the domain to the Pages project.** Dashboard -> **Workers &
    Pages** -> `missingdays` -> **Custom domains** -> **Set up a custom
    domain**. Because the zone is on Cloudflare, the required CNAME record
-   (apex, flattened, proxied, pointing at `missingdays.pages.dev`) is
+   (apex, flattened, proxied, pointing at `missingdays.besteffortindustries.com`) is
    created for you. **Do not create the record by hand first**; a
    pre-existing CNAME blocks the flow outright.
 3. **Repeat for `www`** if both should resolve.
 4. **Wait for the certificate.** Issuance normally completes within a few
    minutes of the record appearing.
 
-Until then the site is reachable at `missingdays.pages.dev`.
+Until then the site is reachable at `missingdays.besteffortindustries.com`.
 
 ### Related
 
