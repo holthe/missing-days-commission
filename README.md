@@ -71,9 +71,21 @@ wrangler.toml         Cloudflare Pages configuration
 mise.toml             pins the Wrangler version used to deploy
 ```
 
-The page makes zero requests to any external domain. Body type is Courier
-New with Courier fallbacks and headings are Georgia with serif fallbacks,
-so there are no webfonts to host or wait for.
+The page makes zero requests to any external domain. Headings and prose are
+Georgia with serif fallbacks; Courier is reserved for the parts of an
+investigation that would have been typed, which is to say case numbers,
+labels, stamps and exhibit captions.
+
+## The design
+
+The site is the Commission's evidence wall. Everything sits on a dark
+incident-room ground: the case plate pinned crooked at the top, the lead
+typed on a memo, `cal 9 1752` framed like a photograph, the eleven missing
+days as scattered cards on a board strung together with red lines, the
+records service on a clipboard, and the adjacent cases on index cards.
+Nothing imitates a photograph of a real object, deliberately: the props are
+drawn flat, so none of them can look like a bad photograph of the real
+thing. Every asset is inline CSS or SVG.
 
 ### The production domain
 

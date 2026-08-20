@@ -1,21 +1,16 @@
-<!-- Pixel-grid 16px icon, used only for the smallest favicon.ico entry.
-     The same calendar page as favicon.svg on a 16 grid: a month of ink
-     squares with a hole where the second week should be, and a red mark
-     over the scene of the incident. -->
+<!-- Pixel-grid 16px icon for the smallest .ico entry: the pinned card,
+     redrawn straight-on because a 3-degree tilt is invisible at this size
+     and only smears the edges. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" shape-rendering="crispEdges">
-  <rect width="16" height="16" fill="#e9e0c9"/>
-  <rect x="2" y="1" width="12" height="14" fill="#f6f1e2"/>
+  <rect width="16" height="16" fill="#25282a"/>
+  <rect x="3" y="3" width="10" height="11" fill="#fffdf4"/>
   <g fill="#2c2a24">
-    <rect x="2" y="1" width="12" height="1"/>
-    <rect x="2" y="14" width="12" height="1"/>
-    <rect x="2" y="1" width="1" height="14"/>
-    <rect x="13" y="1" width="1" height="14"/>
-    <rect x="2" y="2" width="12" height="2"/>
     <rect x="4" y="6" width="2" height="2"/>
     <rect x="7" y="6" width="2" height="2"/>
     <rect x="10" y="6" width="2" height="2"/>
     <rect x="4" y="10" width="2" height="2"/>
     <rect x="10" y="10" width="2" height="2"/>
   </g>
-  <rect x="7" y="10" width="2" height="2" fill="#a02e24"/>
+  <rect x="7" y="10" width="2" height="2" fill="#b0362c"/>
+  <rect x="7" y="2" width="2" height="2" fill="#c0392b"/>
 </svg>

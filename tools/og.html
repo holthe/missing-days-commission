@@ -2,8 +2,9 @@
 <!--
   Source for /og.png (1200x630). Rendered by `make og`.
   Edit the copy here, not the PNG. Regenerate after any tagline change.
-  The domain in the footer is the production-domain placeholder; if the
-  site lands somewhere other than missingdays.besteffortindustries.com, change it here too.
+  The card is the site in miniature: the case plate pinned to the wall.
+  The domain in the footer is the canonical host; if the site moves,
+  change it here too and re-run `make og`.
 -->
 <html>
 <head>
@@ -12,48 +13,48 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 1200px; height: 630px; }
   body {
-    background: #e9e0c9;
-    color: #2c2a24;
-    font-family: "Courier New", Courier, monospace;
-    display: flex; flex-direction: column; text-align: center;
+    background: #25282a;
+    background-image: radial-gradient(120% 90% at 50% 0%, rgba(255,244,214,.07), transparent 65%);
+    color: #ddd8c6;
+    font-family: Georgia, "Times New Roman", serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative;
   }
-  .rules { flex: none; border-bottom: 3px double #2c2a24; height: 14px; margin: 8px 0 0; border-top: 3px double #2c2a24; }
-  .mid {
-    flex: 1;
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    padding: 0 80px;
+  .plate {
+    background: #fffdf4; color: #2c2a24;
+    width: 780px; padding: 42px 50px 38px;
+    transform: rotate(-1.2deg);
+    box-shadow: 0 20px 48px rgba(0,0,0,.55);
   }
-  .unit {
-    font-size: 19px; letter-spacing: 0.32em; text-transform: uppercase;
-    color: #6f6a58;
-  }
-  h1 {
-    font-family: Georgia, serif; font-size: 78px; font-weight: 400;
-    margin-top: 16px;
-  }
-  .caseline { margin-top: 20px; font-size: 21px; }
+  .unit { font-family: "Courier New", Courier, monospace;
+    font-size: 15px; letter-spacing: .26em; text-transform: uppercase; color: #6f6a58; }
+  h1 { font-size: 58px; font-weight: 400; margin-top: 12px; line-height: 1.1; }
+  .caseline { font-family: "Courier New", Courier, monospace;
+    margin-top: 22px; font-size: 15px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
   .stamp {
-    margin-top: 38px;
-    display: inline-block; border: 6px solid #a02e24; color: #a02e24;
-    font-weight: 700; letter-spacing: 0.24em; padding: 10px 36px;
-    transform: rotate(-4deg); text-transform: uppercase; font-size: 32px;
+    display: inline-block; border: 4px solid #a02e24; color: #a02e24;
+    font-family: "Courier New", Courier, monospace; font-weight: 700; letter-spacing: .2em;
+    padding: 5px 16px; transform: rotate(-4deg); text-transform: uppercase; font-size: 17px;
     background: rgba(255,255,255,.25);
   }
   .foot {
-    flex: none;
-    padding: 0 72px 26px;
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 0 60px 26px;
     display: flex; justify-content: space-between;
-    font-size: 17px; color: #6f6a58;
-    text-transform: uppercase; letter-spacing: 0.14em;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px; color: #8f8b7d;
+    text-transform: uppercase; letter-spacing: .13em;
   }
 </style>
 </head>
 <body>
-  <div class="mid">
+  <div class="plate">
     <div class="unit">Cold Cases, Calendrical</div>
     <h1>The Missing Days Commission</h1>
-    <div class="caseline">CASE NO. 1752-09 &#183; ELEVEN DAYS &#183; LAST SEEN: SEPTEMBER 2, 1752</div>
-    <div class="stamp">Case Open</div>
+    <div class="caseline">
+      <span class="stamp">Case Open</span>
+      <span>CASE NO. 1752-09 &#183; ELEVEN DAYS &#183; LAST SEEN: SEPT 2, 1752</span>
+    </div>
   </div>
   <div class="foot">
     <span>DOC: BEI-012</span>

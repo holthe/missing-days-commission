@@ -12,7 +12,7 @@ INKSCAPE ?= inkscape
 # The kraft-paper background, without the leading hash: an unescaped '#' in a make
 # assignment starts a comment. Icons are flattened onto it rather than kept
 # transparent, so they read the same on a light or a dark browser chrome.
-KRAFT := e9e0c9
+KRAFT := 25282a
 
 .PHONY: help
 help: ## Show this help
@@ -26,7 +26,7 @@ og: ## Re-render og.png from tools/og.html
 	$(CHROME) --headless=new --disable-gpu --hide-scrollbars \
 		--force-device-scale-factor=1 --default-background-color=$(KRAFT)FF \
 		--screenshot=/tmp/mdc-og-raw.png --window-size=1200,630 tools/og.html
-	$(MAGICK) /tmp/mdc-og-raw.png -strip -colors 64 PNG8:og.png
+	$(MAGICK) /tmp/mdc-og-raw.png -strip -dither None -colors 128 PNG8:og.png
 	@rm -f /tmp/mdc-og-raw.png
 	@echo "wrote og.png"
 

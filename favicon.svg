@@ -1,19 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <title>The Missing Days Commission</title>
-  <rect width="64" height="64" fill="#e9e0c9"/>
-  <rect x="10" y="8" width="44" height="48" fill="#f6f1e2" stroke="#2c2a24" stroke-width="2.5"/>
-  <rect x="10" y="8" width="44" height="10" fill="#2c2a24"/>
-  <g fill="#2c2a24">
-    <rect x="16" y="24" width="6" height="6"/>
-    <rect x="26" y="24" width="6" height="6"/>
-    <rect x="36" y="24" width="6" height="6"/>
-    <rect x="46" y="24" width="6" height="6"/>
-    <rect x="16" y="34" width="6" height="6"/>
-    <rect x="46" y="34" width="6" height="6"/>
-    <rect x="16" y="44" width="6" height="6"/>
-    <rect x="26" y="44" width="6" height="6"/>
-    <rect x="36" y="44" width="6" height="6"/>
-    <rect x="46" y="44" width="6" height="6"/>
+  <!-- A card pinned to the incident-room wall, with the gap where the
+       eleven days should be. Dark wall, cream card, red pin. -->
+  <rect width="64" height="64" fill="#25282a"/>
+  <rect x="12" y="10" width="40" height="44" fill="#fffdf4" transform="rotate(-3 32 32)"/>
+  <g fill="#2c2a24" transform="rotate(-3 32 32)">
+    <rect x="18" y="24" width="6" height="5"/>
+    <rect x="27" y="24" width="6" height="5"/>
+    <rect x="40" y="24" width="6" height="5"/>
+    <rect x="18" y="33" width="6" height="5"/>
+    <rect x="40" y="33" width="6" height="5"/>
+    <rect x="18" y="42" width="6" height="5"/>
+    <rect x="27" y="42" width="6" height="5"/>
+    <rect x="40" y="42" width="6" height="5"/>
   </g>
-  <rect x="25" y="32" width="19" height="10" fill="none" stroke="#a02e24" stroke-width="2.5" transform="rotate(-5 34.5 37)"/>
+  <rect x="27" y="33" width="19" height="5" fill="#b0362c" transform="rotate(-3 32 32)"/>
+  <circle cx="32" cy="13" r="5" fill="#c0392b"/>
+  <circle cx="30.4" cy="11.4" r="1.6" fill="#e8867a"/>
 </svg>
