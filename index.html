@@ -120,7 +120,12 @@
     box-shadow:0 12px 28px rgba(0,0,0,.38);transform:rotate(.4deg);position:relative}
   .checker label{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6f6a58;margin-bottom:8px}
   .row{display:flex;gap:10px;flex-wrap:wrap}
-  input[type=date]{font-size:15px;padding:9px 11px;border:1px solid #6f6a58;background:#fff;min-width:190px;color:var(--ink)}
+  .checker input,.checker select{font-family:inherit;font-size:15px;padding:9px 11px;border:1px solid #6f6a58;
+    background:#fff;color:var(--ink)}
+  .checker input{width:5.5em}
+  .checker input#yIn{width:6em}
+  .checker select{min-width:11em}
+  .picker-note{margin-top:12px;font-size:12.5px;color:#6f6a58;max-width:56ch}
   button{font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;background:var(--ink);color:#e9e0c9;border:0;padding:11px 22px;cursor:pointer}
   button:hover{background:#454238}
   .finding{margin-top:16px;padding:16px;border-left:5px solid;display:none;background:#fff;font-size:14px}
@@ -175,7 +180,7 @@
   <div class="wrap">
     <div class="kicker">Evidence</div>
     <h2>Exhibit A</h2>
-    <p class="intro">Every Unix system ships with a witness. Run "cal 9 1752" on a terminal near you and it will testify, as it has for fifty years, without being asked twice.</p>
+    <p class="intro">POSIX specifies a witness, and the common implementations ship with a witness. Run "cal 9 1752" on a terminal near you and it will testify, as it has for fifty years, without being asked twice.</p>
     <div class="exhibit">
       <div class="lbl">Exhibit A · Terminal output · Unmodified</div>
       <pre>$ cal 9 1752
@@ -212,12 +217,22 @@ Su Mo Tu We Th Fr Sa
     <h2>Verify a date against the British record</h2>
     <p class="intro">Enter any date. The Commission will confirm whether it occurred in Britain and its colonies, or whether it is among the missing.</p>
     <div class="checker">
-      <label for="dateIn">Date to verify</label>
+      <label for="yIn">Date to verify</label>
       <div class="row">
-        <input type="date" id="dateIn" value="1752-09-08" min="1600-01-01" max="2100-12-31">
+        <input type="number" id="yIn" value="1752" min="1" max="2100" step="1" aria-label="Year">
+        <select id="mIn" aria-label="Month">
+          <option value="1">January</option><option value="2">February</option>
+          <option value="3">March</option><option value="4">April</option>
+          <option value="5">May</option><option value="6">June</option>
+          <option value="7">July</option><option value="8">August</option>
+          <option value="9" selected>September</option><option value="10">October</option>
+          <option value="11">November</option><option value="12">December</option>
+        </select>
+        <input type="number" id="dIn" value="8" min="1" max="31" step="1" aria-label="Day">
         <button id="verifyBtn">Check the record</button>
       </div>
-      <div class="finding" id="finding"></div>
+      <p class="picker-note">The Commission does not issue a date picker. A date picker will not accept February 30, and the Commission has February 30 on file.</p>
+      <div class="finding" id="finding" role="status" aria-live="polite"></div>
     </div>
   </div>
 </section>
@@ -267,10 +282,14 @@ Su Mo Tu We Th Fr Sa
 
   var finding = document.getElementById('finding');
   document.getElementById('verifyBtn').addEventListener('click', function(){
-    var v = document.getElementById('dateIn').value;
-    if(!v){ finding.className='finding gone'; finding.innerHTML='<b>Record incomplete</b>No date supplied. The Commission has enough missing dates already.'; return; }
-    var p = v.split('-').map(Number);
-    var y=p[0], m=p[1], d=p[2];
+    var y = parseInt(document.getElementById('yIn').value, 10);
+    var m = parseInt(document.getElementById('mIn').value, 10);
+    var d = parseInt(document.getElementById('dIn').value, 10);
+    if(!y || !m || !d || d < 1 || d > 31){
+      finding.className='finding gone';
+      finding.innerHTML='<b>Record incomplete</b>No date supplied. The Commission has enough missing dates already.';
+      return;
+    }
     if(y===1752 && m===9 && d>=3 && d<=13){
       finding.className='finding gone';
       finding.innerHTML='<b>DATE MISSING · MATCHES CASE 1752-09</b>'
